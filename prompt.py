@@ -4,7 +4,7 @@ from etherscan import Etherscan
 from web3 import Web3
 
 #etherscan API auth
-eth = Etherscan('NS5WPY3VNNAKZUGKQ8PVFYWM5HDZQC9ZGU')
+eth = Etherscan('[auth]')
 
 #accept contract address user input - but in all lowercase (.lower())
 input_address = str(input('Enter contract address: ')).lower()
@@ -13,7 +13,7 @@ input_address = str(input('Enter contract address: ')).lower()
 abi = eth.get_contract_abi(input_address)
 
 #connect to node
-inufa_url = 'https://mainnet.infura.io/v3/e187dce07e71440495048ced60462b0c'
+inufa_url = 'https://mainnet.infura.io/v3/[auth]'
 web3 = Web3(Web3.HTTPProvider(inufa_url))
 #check connection
 web3.isConnected()
